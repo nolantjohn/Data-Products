@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generation Guesser</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Generation Guesser">
+  <meta name="author" content="Nolan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Generation Guesser</h1>
+    <h2>Predicting Your Generation</h2>
+    <p>Nolan<br/>Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>This application attempts to guess what generation a user belongs to</li>
+<li>Generation Breakdown:</li>
+</ul>
+
+<pre><code class="r">gendata &lt;- read.csv(&quot;data/generationrangdata.txt&quot;)
+gendata
+</code></pre>
+
+<pre><code>##     generation minAge maxAge
+## 1  Baby Boomer     50     70
+## 2 Generation X     36     49
+## 3   Millenials     18     35
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Pitch?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The motivation behind this app is two fold:</p>
+
+<pre><code>1. I was interested in seeing what age group of users would find and use this app the most
+
+2. I wanted to know if certain generations are more aware of their 
+   generation&#39;s characteristics then others
+</code></pre></li>
+<li><p>This app was put together quickly, so the questions are items that came to mind over a week period</p></li>
+<li><p>By using the app your are helping create data points that will hopefully answer the questions above</p></li>
+<li><p>Give it a try, it&#39;ll only take a minute</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Inputs &amp; Outputs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Inputs:</p>
+
+<ul>
+<li>General questions answered through true or false check boxes</li>
+<li>Drop down list taking in the users actual generation</li>
+<li>The ability to save the users session data (guess, real generation, and if they know their generation)</li>
+</ul>
+
+<p>Outputs:</p>
+
+<ul>
+<li>The generation guessed</li>
+<li>Whether or not the guess was correct</li>
+<li>A plot of the applications use by generation</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Usage to Date</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">gendata &lt;- read.csv(&quot;data/generationdata.csv&quot;)
+plot(gendata$Answer, main = &quot;Usage by Generation&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Pitch?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Inputs &amp; Outputs'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Usage to Date'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

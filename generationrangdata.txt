@@ -1,0 +1,4 @@
+generation,minAge,maxAge
+"Baby Boomer",50,70
+"Generation X",36,49
+"Millenials",18,35
